@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#102a43">
+  <meta name="description" content="Radar Hostelería: oportunidades y señales para negocios de restauración.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="theme.css">
+  <title>Radar Hostelería</title>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Radar Hostelería, inicio"><span class="brand-mark">R</span><span>Radar<br><b>Hostelería</b></span></a>
+    <div class="top-actions"><button class="icon-button" id="installButton" hidden aria-label="Instalar aplicación" title="Instalar app">⇩</button><button class="icon-button" id="themeButton" aria-label="Cambiar tema">◐</button></div>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <p class="eyebrow">INTELIGENCIA PARA HOSTELERÍA</p>
+      <h1>Detecta dónde está la próxima <em>oportunidad.</em></h1>
+      <p class="hero-copy">Una lectura rápida de las señales que importan para tomar mejores decisiones en tu negocio.</p>
+      <div class="hero-actions"><a class="button primary" href="#radar">Ver el radar</a><button class="button secondary" id="shareButton">Compartir</button></div>
+    </section>
+
+    <section class="stats" aria-label="Resumen semanal">
+      <article><strong>24</strong><span>señales activas</span></article><article><strong>8</strong><span>oportunidades</span></article><article><strong>+12%</strong><span>interés local</span></article>
+    </section>
+
+    <section class="section" id="radar">
+      <div class="section-heading"><div><p class="eyebrow">RADAR SEMANAL</p><h2>Lo que se está moviendo</h2></div><span id="resultCount" class="result-count"></span></div>
+      <div class="filters" aria-label="Filtrar señales"><button class="filter active" data-filter="Todos">Todo</button><button class="filter" data-filter="Tendencia">Tendencias</button><button class="filter" data-filter="Local">Local</button><button class="filter" data-filter="Costes">Costes</button></div>
+      <div class="cards" id="signalCards"></div>
+    </section>
+
+    <section class="insight">
+      <p class="eyebrow">EL DATO DE LA SEMANA</p><blockquote>“El menú del día sigue siendo el principal motivo de elección para el 43% de los comensales entre semana.”</blockquote><p>Una propuesta clara, bien comunicada y fácil de reservar gana peso frente a una carta interminable.</p>
+    </section>
+
+    <section class="section opportunity-section">
+      <div class="section-heading"><div><p class="eyebrow">SIGUIENTE PASO</p><h2>Una oportunidad para hoy</h2></div></div>
+      <article class="opportunity"><span class="opportunity-icon">✦</span><div><p class="tag">ACCIÓN RECOMENDADA</p><h3>Haz visible tu menú de mediodía</h3><p>Actualízalo en Google, redes y escaparate antes de las 12:00. Es el momento con más intención de búsqueda.</p></div><button id="saveTip" class="save-button" aria-label="Guardar recomendación">♡</button></article>
+    </section>
+  </main>
+
+  <footer><span class="brand-mark small">R</span><p>Radar Hostelería · edición 1.1</p><p class="muted">Hecho para decidir con criterio.</p></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
